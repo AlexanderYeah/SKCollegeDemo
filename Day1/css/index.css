@@ -1,0 +1,64 @@
+/*************************通用的样式*************************/
+
+body{
+    font-size: 13px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+
+@font-face {
+    font-family: lk;
+    src: url('../fonts/lk.eot') format('embedded opentype'),
+    url('../fonts/lk.svg') format('svg'),
+    url('../fonts/lk.ttf') format('ttf'),
+    url('../fonts/lk.woff') format('woff')
+}
+
+[class^="icon-"],
+[class*="icon-"]{
+    font-family: lk;
+    font-style: normal;
+}
+
+
+/*":before" 伪元素可以在元素的内容前面插入新内容。*/
+
+.icon-phone::before{
+    content: '\e958';
+    font-size: 13px;
+}
+
+
+.icon-tel::before{
+    content: '\e942';
+    font-size: 13px;
+}
+
+
+
+/*************************头部的样式*************************/
+#lk_header .top-bar{
+
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#lk_header .top-bar .row>div+div{
+
+    border-left: 1px solid #e0e0e0;
+}
+#lk_header .top-bar .row .top-bar-1 a{
+    position: relative;
+}
+#lk_header .top-bar .row .top-bar-1 a img{
+    position: absolute;
+    display: none;
+    margin-left: -10px;
+}
+
+/* 鼠标移到a 标签展示二维码 */
+#lk_header .top-bar .row .top-bar-1 a:hover img{
+    display: block;
+}
+
+
